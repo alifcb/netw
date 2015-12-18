@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<!--        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <link rel="stylesheet" type="text/css" href="css/index.css" />
+ <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!-- Demo -->
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/java.js"></script>
+<title>کرمانشاه رویداد</title>
+</head>
+<body>
+<div class="backoff" id="status"></div>
+<div class="elemnts" id="status2">
+<img src="img/loading.gif">
+</div>
+<!--<div id="deviceready" class="blink">
+  <p class="event listening">Connecting to Device</p>
+  <p class="event received">Device is Ready</p>
+</div>-->
+
+<div data-role="page" id="pageone" data-theme="a">
+  <div data-role="panel" id="myPanel" data-display="overlay" data-position="right">
+    <h2 class="right">کرمانشاه رویداد</h2>
+    <ul data-role="listview" class="right panels" data-inset="false">    
+      <li  data-icon="false"><a class="list"  href="#pagetwo" data-transition="slide">لیست رویداد ها</a></li>
+      <li  data-icon="false"><a onClick="cat(1)" class="bazar" href="#category" data-transition="slide">بازار</a></li>
+      <li data-icon="false"><a onClick="cat(2)" class="farhang" href="#category" data-transition="slide">فرهنگی</a></li>
+      <li data-icon="false"><a onClick="cat(3)" class="shahr" href="#category" data-transition="slide">درشهر</a></li>
+      <li data-icon="false"><a onClick="cat(4)" class="varzesh" href="#category" data-transition="slide">ورزشی</a></li>
+      <li data-icon="false"><a class="about" href="#about_us" data-transition="slide">درباره ما</a></li>
+
+    </ul>
+  </div> 
+<div data-role="header" class="red ">
+<a class="pad_ha" onClick="exitFromApp()" data-role="none"><img src="res/text/off.png"></a>
+  <h1 class="pad_h1"><img src="res/text/roy.png"></h1>
+  <a href="#myPanel" class="pad_ha" data-role="none"><img src="res/text/left.png"></a>
+</div>
+<div id="owl-demo" class="owl-carousel slider" >
+
+
+</div>
+<div class="ui-grid-solo gray border-tb">
+<div class="ui-block-a">
+<a href="#pagetwo" data-transition="flip" class="ui-btn ui-corner-all ui-mini font_size17  ui-shadow green">لیست رویدادها</a>
+</div>
+</div>    
+
+<p class=" red right last twit" >آخرین رویدادها</p>
+<div data-role="main" id="lastr" class="ui-content" dir="rtl" >
+ <ul data-role="listview" data-inset="false" id="ali" class="right listst">
+
+    </ul>
+</div>
+<div  >
+<p class=" red right last sinma" > سینما و تئاتر</p>
+    <div id="owl-demo2" class="owl-carousel owl-theme">
+</div>
+
+<div class=" gray_d right rooz" id="payams"></div>
+<br>
+
+   </div>
+    </div> 
+   
+<div data-role="page" id="pagetwo">
+<div data-role="header" class="red ">
+<a class="pad_ha" href="#pageone" data-direction="reverse"data-role="none" data-transition="slide"><img src="res/text/home.png"></a>
+ <!-- <a  onClick="exitFromApp()" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-icon-notext">Home</a>-->
+  <h1 class="pad_h1"><img src="res/text/roy.png"></h1>
+
+</div>
+  <div data-role="main" class="ui-content">
+    <h2 class="right">لیست رویدادها</h2>
+    <ul data-role="listview" class="right " data-inset="true">    
+      <li data-role="list-divider" class="right font_big "><a onClick="cat(1)" href="#category">بازار</a></li>
+      <li data-icon="false"><a onClick="subc(1)" href="#category">نمایشگاه ها</a></li>
+      <li data-icon="false"><a onClick="subc(2)" href="#category">فروش های فوق العاده</a></li>
+      <li data-icon="false"><a onClick="subc(3)" href="#category">افتتاحیه ها</a></li>
+      <li data-role="list-divider" class="right font_big"><a onClick="cat(2)" href="#category">فرهنگی</a></li>
+      <li data-icon="false"><a onClick="subc(4)" href="#category">سینما فرهنگ</a></li>
+      <li data-icon="false"><a onClick="subc(5)" href="#category">سینما آزادی</a></li>
+      <li data-icon="false"><a onClick="subc(6)" href="#category">مجمتع انتظار</a></li>      
+      <li data-role="list-divider" class="right font_big"><a onClick="cat(3)" href="#category">در شهر</a></li>
+      <li data-icon="false"><a onClick="subc(7)" href="#category">استان</a></li>
+      <li data-icon="false"><a onClick="subc(8)" href="#category">شهرستان ها</a></li>
+      <li data-role="list-divider" class="right font_big"><a onClick="cat(4)" href="#category">ورزشی</a></li>
+      <li data-icon="false"><a onClick="subc(9)" href="#category">استان</a></li>
+      <li data-icon="false"><a onClick="subc(10)" href="#category">شهرستان ها</a></li>
+      
+    </ul>
+  </div>
+ </div>
+
+ <div data-role="page" id="content">
+  <div data-role="panel" id="myPanel2" data-display="overlay" data-position="right">
+    <h2 class="right">کرمانشاه رویداد</h2>
+    <ul data-role="listview" class="right panels" data-inset="false">    
+      <li  data-icon="false"><a class="list"  href="#pagetwo" data-transition="slide">لیست رویداد ها</a></li>
+      <li  data-icon="false"><a onClick="cat(1)" class="bazar" href="#category" data-transition="slide">بازار</a></li>
+      <li data-icon="false"><a onClick="cat(2)" class="farhang" href="#category" data-transition="slide">فرهنگی</a></li>
+      <li data-icon="false"><a onClick="cat(3)" class="shahr" href="#category" data-transition="slide">درشهر</a></li>
+      <li data-icon="false"><a onClick="cat(4)" class="varzesh" href="#category" data-transition="slide">ورزشی</a></li>
+      <li data-icon="false"><a class="about" href="#about_us" data-transition="slide">درباره ما</a></li>
+
+    </ul>
+  </div> 
+ <div data-role="header" class="red ">
+     <a  class="pad_ha" href="#pageone" data-direction="reverse" data-role="none" data-transition="slide"><img src="res/text/home.png"></a>
+  <h1 class="pad_h1"><img src="res/text/roy.png"></h1>
+    <a href="#myPanel2" class="pad_ha" data-role="none"><img src="res/text/left.png"></a>
+</div> 
+  
+  <div id="owl-demo3" class="owl-carousel owl-theme">
+<div class="item"><img src=""></div>
+</div>
+  <div id="postc" data-role="main" class="ui-content right postx">
+
+  </div>
+</div>
+
+
+        
+<div data-role="page" id="category">
+  <div data-role="panel" id="myPanel3" data-display="overlay" data-position="right">
+    <h2 class="right">کرمانشاه رویداد</h2>
+    <ul data-role="listview" class="right panels" data-inset="false">    
+      <li  data-icon="false"><a class="list"  href="#pagetwo" data-transition="slide">لیست رویداد ها</a></li>
+      <li  data-icon="false"><a onClick="cat(1)" class="bazar" href="#category" data-transition="slide">بازار</a></li>
+      <li data-icon="false"><a onClick="cat(2)" class="farhang" href="#category" data-transition="slide">فرهنگی</a></li>
+      <li data-icon="false"><a onClick="cat(3)" class="shahr" href="#category" data-transition="slide">درشهر</a></li>
+      <li data-icon="false"><a onClick="cat(4)" class="varzesh" href="#category" data-transition="slide">ورزشی</a></li>
+      <li data-icon="false"><a class="about" href="#about_us" data-transition="slide">درباره ما</a></li>
+
+    </ul>
+  </div> 
+<div data-role="header" class="red ">
+<a class="pad_ha" href="#pageone" data-direction="reverse"data-role="none" data-transition="slide"><img src="res/text/home.png"></a>
+  <h1 class="pad_h1"><img src="res/text/roy.png"></h1>
+  <a href="#myPanel3" class="pad_ha" data-role="none"><img src="res/text/left.png"></a>
+</div>
+<p class=" blue right last2 twit" id="ncat" >آخرین رویدادها</p>
+<div data-role="main" class="ui-content"  dir="rtl" >
+ <ul data-role="listview" data-inset="false" id="catlist" class="right listcat">
+
+ </ul>
+</div>
+ </div>
+
+
+<!--about us-->
+<div data-role="page" id="about_us">
+<div data-role="header" class="red ">
+<a class="pad_ha" href="#pageone" data-direction="reverse"data-role="none" data-transition="slide"><img src="res/text/home.png"></a>
+  <h1 class="pad_h1"><img src="res/text/roy.png"></h1>
+</div>
+
+<div data-role="main" class="ui-content"  dir="rtl" >
+<div class="row">
+<div class="col-11 menu">
+<h2>شرکت گسترش وب نامیا</h2>
+<p>گروه نامیا به عنوان یک مجموعه‌ی ارائه‌کننده‌ی خدمات طراحی، پشتیبانی و یهینه سازی وب سایت ارائه‌ی خدمات کارساز به مشتریان و 
+پاسخ‌گویی موثر به نیاز آنان را رکن اصلی توسعه‌ی فعالیت‌های خود قرار داده است. </p>
+<ul>
+<li>شماره تماس:08338234495</li>
+<li>ایمیل:info@namiaweb.com</li>
+<li>وب سایت:www.namiaweb.com </li>
+<li>آدرس: کرمانشاه، پارک علم و فناوری، طبقه چهارم واحد 422</li>
+</ul>
+</div>
+
+<div class="col-4">
+<img src="res/img/about_us.jpg"></div>
+</div>
+
+</div>
+
+</div>
+ </div>
+ <div id="owl-demo4"></div>
+<style>#owl-demo .item2 img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#owl-demo2 .item img{
+display: block;
+width: 100%;
+max-height:150px !important;
+min-height:100px !important;
+}
+#owl-demo2 .item{
+margin: 5px;
+}
+#owl-demo3 .item img{
+display: block;
+width: 100%;
+  text-align: center;
+  border-bottom:#CCC 1px solid;
+}</style>
+<script src="js/owl.carousel.js"></script>
+<script src="js/loadpic.js"></script>
+
+</div> <!--status id-->
+
+
+</body>
+
+</html>
